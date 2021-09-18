@@ -1,0 +1,141 @@
+/* universal and basic structure */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* background-color: red; */
+}
+.arrow{display: none;}
+/* designing navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 100vw;
+    height: 13vh;
+    background-color: rgb(21, 136, 21);
+}
+.navbar ul{
+    list-style: none;
+    color: white;
+    font-size: 30px;
+}
+.navbar .logo {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    right: 10px;
+}
+/* main container */
+.container {
+    width: 100vw;
+    height: 87vh;
+    position: absolute;
+    left: 0px;
+    top: 13vh;
+    /* overflow: hidden; */
+    background-color: rgb(169, 195, 163);
+}
+/* aside bar */
+.asidebar {
+    width: 33vw;
+    height: 87vh;
+    border: 1px solid gray;
+}
+/* aside bar question */
+.asidequestion {
+    cursor: pointer;
+    width: 31vw;
+    height: 15vh;
+    background-color: darkolivegreen;
+    color: white;
+    margin: 2vh 1vw;
+    border-radius: 20px;display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-align: center;
+}
+/* chat container */
+.chatcontainer {
+    width: 66vw;
+    height: 87vh;
+    overflow-x: hidden;
+    background-color: transparent;
+    position: absolute;
+    top: 0vh;
+    left: 33.4vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-start;
+    flex-direction: column;
+}
+/* robochat */
+.robochat {
+    width: 30vw;
+    background-color: white;
+    color: black;
+    font-size: 21px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 36vw;
+    border-radius: 10px;
+}
+/* userchat */
+.userchat {
+    width: 30vw;
+    background-color: green;
+    color: black;
+    font-size: 21px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+/* making for android with meadia query */
+@media screen and (max-width:800px) {
+    /* navbar li font size */
+    .navbar ul{font-size: 20px;}
+    /* display none for sidebar */
+    .asidebar{display: none;}
+    .chatcontainer{
+        width: 98vw;
+        left: 1vw;
+    }
+    .userchat{width: 40vw;}
+    .robochat{
+        width: 40vw;
+        margin-left: 55vw;
+    }
+    .arrow{
+        display: block;
+        position: absolute;
+        left: 3px;
+        font-size: 33px;
+        padding: 3px;
+        top: 45vh;
+        background-color: gray;
+    }
+    .asidebar {
+        display: none;
+        animation: slide .4s linear;
+        width: 100vw;   
+        background-color: rgb(169, 195, 163);
+    }
+    .asidequestion{
+        width: 98vw;
+        animation: slide .4s linear;
+    }
+    @keyframes slide {
+        0%{width: 0vw;}
+        100%{width: 100vw;}
+    }
+}
