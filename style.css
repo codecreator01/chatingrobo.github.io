@@ -103,6 +103,11 @@ body {
 /* making for android with meadia query */
 @media screen and (max-width:800px) {
     /* navbar li font size */
+    .navbar{height:9vh;}
+    .navbar .logo{
+        height:7vh;
+        width:7vh;
+    }
     .navbar ul{font-size: 20px;}
     /* display none for sidebar */
     .asidebar{display: none;}
